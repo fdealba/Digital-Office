@@ -67,9 +67,9 @@ function browserSync(done) {
     server: {
       baseDir: "./",
       routes: {
-        "/home": "./html/landings/app-payment.html",
-        "/pricings": "./html/pages/pricing.html",
-        "/about-us": "./html/pages/about-agency.html"
+        "/home": "https://fdealba.github.io/Digital-Office/html/landings/app-payment.html",
+        "/pricings": "https://fdealba.github.io/Digital-Office/html/pages/pricing.html",
+        "/about-us": "https://fdealba.github.io/Digital-Office/html/pages/about-agency.html"
       },
       middleware: function (req, res, next) {
         if (/\.json|\.txt|\.html/.test(req.url) && req.method.toUpperCase() == 'POST') {
