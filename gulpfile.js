@@ -63,14 +63,10 @@ function scss() {
 function browserSync(done) {
   browsersync.init({
     files: "./*.html",
-    startPath: "./home",
+    startPath: "./html/landings/app-payment.html",
     server: {
       baseDir: "./",
-      routes: {
-        "/home": "./html/landings/app-payment.html",
-        "/pricings": "./html/pages/pricing.html",
-        "/about-us": "./html/pages/about-agency.html"
-      },
+      routes: {},
       middleware: function (req, res, next) {
         if (/\.json|\.txt|\.html/.test(req.url) && req.method.toUpperCase() == 'POST') {
           console.log('[POST => GET] : ' + req.url);
