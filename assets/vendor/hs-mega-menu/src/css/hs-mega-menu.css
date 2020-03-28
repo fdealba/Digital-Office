@@ -44,7 +44,7 @@
   .hs-mega-menu-desktop-lg,
   .hs-sub-menu-desktop-lg {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 100%;
     z-index: 2;
     margin-top: -.002rem;
