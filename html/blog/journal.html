@@ -24,141 +24,66 @@
 </head>
 <body>
   <!-- ========== HEADER ========== -->
-  <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-white-nav-links-lg header-show-hide"
+  <header id="header" class="header header-box-shadow-on-scroll header-abs-top header-white-nav-links-lg header-bg-transparent header-show-hide"
           data-hs-header-options='{
             "fixMoment": 1000,
             "fixEffect": "slide"
           }'>
-    <!-- Search -->
-    <div id="searchPushTop" class="search-push-top">
-      <div class="container position-relative">
-        <div class="search-push-top-content pt-3">
-          <!-- Close Button -->
-          <div class="search-push-top-close-btn">
-            <div class="hs-unfold">
-              <a class="js-hs-unfold-invoker btn btn-icon btn-xs btn-soft-secondary mt-2 mr-2" href="javascript:;"
+    <div class="header-section">
+      <!-- Topbar -->
+      <div class="container header-hide-content d-none d-lg-block pt-2">
+        <div class="d-flex align-items-center">
+          <div class="ml-auto">
+            <!-- Jump To -->
+            <div class="hs-unfold d-sm-none mr-2">
+              <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle d-flex align-items-center" href="javascript:;"
                  data-hs-unfold-options='{
-                  "target": "#searchPushTop",
-                  "type": "jquery-slide",
-                  "contentSelector": ".search-push-top"
+                  "target": "#jumpToDropdown",
+                  "type": "css-animation",
+                  "event": "hover",
+                  "hideOnScroll": "true"
                  }'>
-                <svg width="10" height="10" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
-                </svg>
+                Jump to
               </a>
-            </div>
-          </div>
-          <!-- End Close Button -->
 
-          <!-- Input -->
-          <form class="input-group">
-            <input type="search" class="form-control" placeholder="Search Front" aria-label="Search Front">
-            <div class="input-group-append">
-              <button type="button" class="btn btn-primary">Search</button>
-            </div>
-          </form>
-          <!-- End Input -->
-
-          <!-- Content -->
-          <div class="row d-none d-md-flex mt-7">
-            <div class="col-sm-6">
-              <span class="h5">Quick Links</span>
-
-              <div class="row">
-                <!-- Nav Link -->
-                <div class="col-6">
-                  <div class="nav nav-sm nav-x-0 flex-column">
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Search Results List
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Search Results Grid
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      About
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Services
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Invoice
-                    </a>
-                  </div>
-                </div>
-                <!-- End Nav Link -->
-
-                <!-- Nav Link -->
-                <div class="col-6">
-                  <div class="nav nav-sm nav-x-0 flex-column">
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Profile
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      User Contacts
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Reviews
-                    </a>
-                    <a class="nav-link" href="#">
-                      <i class="fas fa-angle-right mr-1"></i>
-                      Settings
-                    </a>
-                  </div>
-                </div>
-                <!-- End Nav Link -->
+              <div id="jumpToDropdown" class="hs-unfold-content dropdown-menu">
+                <a class="dropdown-item" href="../pages/faq.html">Help</a>
+                <a class="dropdown-item" href="../pages/contacts-start-up.html">Contacts</a>
               </div>
             </div>
+            <!-- End Jump To -->
 
-            <div class="col-sm-6">
-              <!-- Banner -->
-              <div class="rounded search-push-top-banner">
-                <div class="d-flex align-items-center">
-                  <div class="search-push-top-banner-container">
-                    <img class="img-fluid search-push-top-banner-img" src="../../assets/img/mockups/img3.png" alt="Image Description">
-                    <img class="img-fluid search-push-top-banner-img" src="../../assets/img/mockups/img2.png" alt="Image Description">
-                  </div>
-
-                  <div>
-                    <div class="mb-4">
-                      <span class="h5">Featured Item</span>
-                      <p>Create astonishing web sites and pages.</p>
-                    </div>
-                    <a class="btn btn-xs btn-soft-success transition-3d-hover" href="javascript:;">Apply Now <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Banner -->
+            <!-- Links -->
+            <div class="nav nav-sm nav-y-0 d-none d-sm-flex ml-sm-auto">
+              <a class="nav-link" href="../pages/faq.html">Help</a>
+              <a class="nav-link" href="../pages/contacts-start-up.html">Contacts</a>
             </div>
+            <!-- End Links -->
           </div>
-          <!-- End Content -->
         </div>
       </div>
-    </div>
-    <!-- End Search -->
+      <!-- End Topbar -->
 
-    <div class="header-section">
       <div id="logoAndNav" class="container">
         <!-- Nav -->
         <nav class="js-mega-menu navbar navbar-expand-lg">
-          <!-- Logo -->
-          <a class="navbar-brand navbar-brand-default" href="../landings/index.html" aria-label="Front">
+          <!-- White Logo -->
+          <a class="navbar-brand navbar-brand-default" href="/html/landings/app-payment.html" aria-label="Front">
             <img src="../../assets/svg/logos/logo-white.svg" alt="Logo">
           </a>
-          <!-- End Logo -->
+          <!-- End White Logo -->
 
-          <!-- Logo -->
-          <a class="navbar-brand navbar-brand-on-scroll" href="../landings/index.html" aria-label="Front">
+          <!-- Default Logo -->
+          <a class="navbar-brand navbar-brand-on-scroll" href="/html/landings/app-payment.html" aria-label="Front">
             <img src="../../assets/svg/logos/logo.svg" alt="Logo">
           </a>
-          <!-- End Logo -->
+          <!-- End Default Logo -->
+
+          <!-- Default Logo -->
+          <a class="navbar-brand navbar-brand-collapsed" href="/html/landings/app-payment.html" aria-label="Front">
+            <img src="../../assets/svg/logos/logo.svg" alt="Logo">
+          </a>
+          <!-- End Default Logo -->
 
           <!-- Responsive Toggle Button -->
           <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle"
@@ -185,71 +110,70 @@
             <div class="navbar-body header-abs-top-inner">
               <ul class="navbar-nav">
                 <!-- Home -->
-                <li class="hs-has-mega-menu navbar-nav-item">
-                  <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Landings</a>
+                <li class="navbar-nav-item">
+                  <a id="homeMegaMenu" class="hs-mega-menu-invoker nav-link" href="../landings/app-payment.html#featuresSection" aria-haspopup="true" aria-expanded="false">Why Digitalo</a>
 
                   <!-- Home - Mega Menu -->
-                  <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="homeMegaMenu">
+                  <!-- <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="homeMegaMenu">
                     <div class="row no-gutters">
-                      <div class="col-lg-6">
+                      <div class="col-lg-6"> -->
                         <!-- Banner Image -->
-                        <div class="navbar-banner" style="background-image: url(../../assets/img/750x750/img1.jpg);">
+                      <!--   <div class="navbar-banner" style="background-image: url(../../assets/img/750x750/img1.jpg);">
                           <div class="navbar-banner-content">
                             <div class="mb-4">
-                              <span class="h2 d-block text-white">Branding Works</span>
-                              <p class="text-white">Experience a level of our quality in both design &amp; customization works.</p>
+                              <span class="h2 d-block text-white">Remote Works</span>
+                              <p class="text-white">Experience a level of our quality in both organization &amp; productivity.</p>
                             </div>
-                            <a class="btn btn-primary btn-sm transition-3d-hover" href="#">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                            <a class="btn btn-primary btn-sm btn-pill transition-3d-hover" href="#">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
                           </div>
-                        </div>
+                        </div> -->
                         <!-- End Banner Image -->
-                      </div>
+                      <!-- </div>
 
                       <div class="col-lg-6">
                         <div class="row mega-menu-body">
                           <div class="col-sm-6 mb-3 mb-sm-0">
-                            <span class="d-block h5">Classic</span>
-                            <a class="dropdown-item" href="../landings/index.html">Agency</a>
-                            <a class="dropdown-item" href="../landings/classic-analytics.html">Analytics <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
-                            <a class="dropdown-item" href="../landings/classic-studio.html">Studio</a>
-                            <a class="dropdown-item" href="../landings/classic-marketing.html">Marketing</a>
-                            <a class="dropdown-item" href="../landings/classic-advertisement.html">Advertisement <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
-                            <a class="dropdown-item" href="../landings/classic-consulting.html">Consulting</a>
-                            <a class="dropdown-item" href="../landings/classic-portfolio.html">Portfolio</a>
-                            <a class="dropdown-item" href="../landings/classic-software.html">Software</a>
-                            <a class="dropdown-item" href="../landings/classic-business.html">Business</a>
+                            <span class="d-block h5"></span>
+                            <a class="dropdown-item" href="index.html">Agency</a>
+                            <a class="dropdown-item" href="classic-analytics.html">Analytics <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
+                            <a class="dropdown-item" href="classic-studio.html">Studio</a>
+                            <a class="dropdown-item" href="classic-marketing.html">Marketing</a>
+                            <a class="dropdown-item" href="classic-advertisement.html">Advertisement <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
+                            <a class="dropdown-item" href="classic-consulting.html">Consulting</a>
+                            <a class="dropdown-item" href="classic-portfolio.html">Portfolio</a>
+                            <a class="dropdown-item" href="classic-software.html">Software</a>
+                            <a class="dropdown-item" href="classic-business.html">Business</a>
                           </div>
 
                           <div class="col-sm-6">
-                            <span class="d-block h5">App</span>
+                            <span class="d-block h5">App features</span>
                             <div class="mb-3">
-                              <a class="dropdown-item" href="../landings/app-ui-kit.html">UI Kit</a>
-                              <a class="dropdown-item" href="../landings/app-saas.html">SaaS</a>
-                              <a class="dropdown-item" href="../landings/app-workflow.html">Workflow</a>
-                              <a class="dropdown-item" href="../landings/app-payment.html">Payment</a>
-                              <a class="dropdown-item" href="../landings/app-tool.html">Tool</a>
+                              <a class="dropdown-item" href="app-ui-kit.html">Admin Panel</a>
+                              <a class="dropdown-item" href="app-workflow.html">Employee's Panel</a>
+                              <a class="dropdown-item" href="app-saas.html">Office plane</a>
                             </div>
 
-                            <span class="d-block h5">Onepages</span>
-                            <a class="dropdown-item" href="../landings/onepage-corporate.html">Corporate</a>
-                            <a class="dropdown-item" href="../landings/onepage-saas.html">SaaS <span class="badge badge-primary badge-pill ml-2">Hot</span></a>
+                            <span class="d-block h5">Benefits</span>
+                            <a class="dropdown-item" href="onepage-corporate.html">Save money on Physical Offices</a>
+                            <a class="dropdown-item" href="onepage-saas.html">Scale faster<span class="badge badge-primary badge-pill ml-2">Hot</span></a>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- End Home - Mega Menu -->
                 </li>
                 <!-- End Home -->
 
                 <!-- Pages -->
-                <li class="hs-has-sub-menu navbar-nav-item">
-                  <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">Pages</a>
+                <!-- <li class="hs-has-sub-menu navbar-nav-item"> -->
+                <li class="navbar-nav-item">
+                  <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link" href="../pages/pricing.html" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu">Pricing</a>
 
                   <!-- Pages - Submenu -->
-                  <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="pagesMegaMenu" style="min-width: 230px;">
+                  <!-- <div id="pagesSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="pagesMegaMenu" style="min-width: 230px;"> -->
                     <!-- Company -->
-                    <div class="hs-has-sub-menu">
+                    <!-- <div class="hs-has-sub-menu">
                       <a id="navLinkPagesCompany" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-controls="navSubmenuPagesCompany">Company</a>
 
                       <div id="navSubmenuPagesCompany" class="hs-sub-menu dropdown-menu" aria-labelledby="navLinkPagesCompany" style="min-width: 230px;">
@@ -261,11 +185,11 @@
                         <a class="dropdown-item" href="../pages/careers-single.html">Careers Single</a>
                         <a class="dropdown-item" href="../pages/hire-us.html">Hire Us</a>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- Company -->
 
                     <!-- Portfolio -->
-                    <div class="hs-has-sub-menu">
+                    <!-- <div class="hs-has-sub-menu">
                       <a id="navLinkPagesPortfolio" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-controls="navSubmenuPagesPortfolio">Portfolio</a>
 
                       <div id="navSubmenuPagesPortfolio" class="hs-sub-menu dropdown-menu" aria-labelledby="navLinkPagesPortfolio" style="min-width: 230px;">
@@ -280,11 +204,11 @@
                         <a class="dropdown-item" href="../portfolio/single-page-grid.html">Single Page Grid</a>
                         <a class="dropdown-item" href="../portfolio/single-page-masonry.html">Single Page Masonry</a>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- End Portfolio -->
 
                     <!-- Login -->
-                    <div class="hs-has-sub-menu">
+                    <!-- <div class="hs-has-sub-menu">
                       <a id="navLinkPagesLogin" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-controls="navSubmenuPagesLogin">Login &amp; Signup</a>
 
                       <div id="navSubmenuPagesLogin" class="hs-sub-menu dropdown-menu" aria-labelledby="navLinkPagesLogin" style="min-width: 230px;">
@@ -296,22 +220,22 @@
                         <a class="dropdown-item" href="../pages/signup-simple.html">Signup Simple</a>
                         <a class="dropdown-item" href="../pages/recover-account-simple.html">Recover Account Simple</a>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- Signup -->
 
                     <!-- Contacts -->
-                    <div class="hs-has-sub-menu">
+                    <!-- <div class="hs-has-sub-menu">
                       <a id="navLinkContactsServices" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-controls="navSubmenuContactsServices">Contacts</a>
 
                       <div id="navSubmenuContactsServices" class="hs-sub-menu dropdown-menu" aria-labelledby="navLinkContactsServices" style="min-width: 230px;">
                         <a class="dropdown-item" href="../pages/contacts-agency.html">Contacts Agency</a>
                         <a class="dropdown-item" href="../pages/contacts-start-up.html">Contacts Start-Up</a>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- Contacts -->
 
                     <!-- Utilities -->
-                    <div class="hs-has-sub-menu">
+                    <!-- <div class="hs-has-sub-menu">
                       <a id="navLinkPagesUtilities" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-controls="navSubmenuPagesUtilities">Utilities</a>
 
                       <div id="navSubmenuPagesUtilities" class="hs-sub-menu dropdown-menu" aria-labelledby="navLinkPagesUtilities" style="min-width: 230px;">
@@ -320,11 +244,11 @@
                         <a class="dropdown-item" href="../pages/terms.html">Terms &amp; Conditions</a>
                         <a class="dropdown-item" href="../pages/privacy.html">Privacy &amp; Policy</a>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- Utilities -->
 
                     <!-- Specialty -->
-                    <div class="hs-has-sub-menu">
+                    <!-- <div class="hs-has-sub-menu">
                       <a id="navLinkPagesSpecialty" class="hs-mega-menu-invoker dropdown-item dropdown-item-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-controls="navSubmenuPagesSpecialty">Specialty</a>
 
                       <div id="navSubmenuPagesSpecialty" class="hs-sub-menu dropdown-menu" aria-labelledby="navLinkPagesSpecialty" style="min-width: 230px;">
@@ -335,42 +259,41 @@
                         <a class="dropdown-item" href="../pages/invoice.html">Invoice</a>
                         <a class="dropdown-item" href="../pages/error-404.html">Error 404</a>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- Specialty -->
-                  </div>
+                  <!-- </div> -->
                   <!-- End Pages - Submenu -->
-                </li>
+                <!-- </li> -->
                 <!-- End Pages -->
 
                 <!-- Blog -->
-                <li class="hs-has-sub-menu navbar-nav-item">
-                  <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">Blog</a>
-
+                <li class="navbar-nav-item">
+                  <a id="blogMegaMenu" class="hs-mega-menu-invoker nav-link" href="../blog/journal.html" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">Tools</a>
                   <!-- Blog - Submenu -->
-                  <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
-                    <a class="dropdown-item" href="../blog/journal.html">Journal</a>
-                    <a class="dropdown-item" href="../blog/metro.html">Metro</a>
-                    <a class="dropdown-item" href="../blog/newsroom.html">Newsroom</a>
+              <!--  <div id="blogSubMenu" class="hs-sub-menu dropdown-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+                    <a class="dropdown-item" href="../blog/journal.html">Blog</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="../blog/blog-profile.html">Blog Profile</a>
-                    <a class="dropdown-item" href="../blog/single-article.html">Single Article</a>
-                  </div>
-                  <!-- End Submenu -->
+                    <a class="dropdown-item" href="../blog/metro.html">Best Practices</a> -->
+                    <!-- <a class="dropdown-item" href="../blog/newsroom.html">Newsroom</a>
+                         <a class="dropdown-item" href="../blog/blog-profile.html">Blog Profile</a>
+                         <a class="dropdown-item" href="../blog/single-article.html">Single Article</a> -->
+<!--                </div>
+ -->              <!-- End Submenu -->
                 </li>
                 <!-- End Blog -->
 
                 <!-- Shop -->
-                <li class="hs-has-mega-menu navbar-nav-item"
+                <!-- <li class="hs-has-mega-menu navbar-nav-item"
                     data-hs-mega-menu-item-options='{
                       "desktop": {
                         "position": "right",
                         "maxWidth": "440px"
                       }
                     }'>
-                  <a id="shopMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Shop</a>
+                  <a id="shopMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Shop</a> -->
 
                   <!-- Shop - Mega Menu -->
-                  <div class="hs-mega-menu dropdown-menu" aria-labelledby="shopMegaMenu">
+                  <!-- <div class="hs-mega-menu dropdown-menu" aria-labelledby="shopMegaMenu">
                     <div class="mega-menu-body">
                       <span class="d-block h5">Shop Elements</span>
 
@@ -391,10 +314,10 @@
                           <a class="dropdown-item" href="../shop/order-completed.html">Order Completed</a>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
 
                     <!-- Mega Menu Banner -->
-                    <div class="navbar-product-banner">
+                    <!-- <div class="navbar-product-banner">
                       <div class="d-flex align-items-end">
                         <img class="img-fluid mr-4" src="../../assets/img/mockups/img4.png" alt="Image Description">
                         <div class="navbar-product-banner-content">
@@ -402,77 +325,92 @@
                             <span class="h4 d-block text-primary">Win T-shirt</span>
                             <p>Win one of our Front brand T-shirts.</p>
                           </div>
-                          <a class="btn btn-sm btn-soft-primary transition-3d-hover" href="../shop/classic.html">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                          <a class="btn btn-sm btn-soft-primary btn-pill transition-3d-hover" href="../shop/classic.html">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- End Mega Menu Banner -->
-                  </div>
+                  <!-- </div> -->
                   <!-- End Shop - Mega Menu -->
-                </li>
+                <!-- </li> -->
                 <!-- End Shop -->
 
                 <!-- Demos -->
-                <li class="hs-has-mega-menu navbar-nav-item"
+                <!-- <li class="hs-has-mega-menu navbar-nav-item"
                     data-hs-mega-menu-item-options='{
                       "desktop": {
                         "position": "right",
                         "maxWidth": "900px"
                       }
                     }'>
-                  <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Demos</a>
+                  <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Demos</a> -->
 
                   <!-- Demos - Mega Menu -->
-                  <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="demosMegaMenu">
+               <!--    <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="demosMegaMenu">
                     <div class="row no-gutters">
                       <div class="col-lg-8">
-                        <div class="navbar-promo-card-deck">
+                        <div class="navbar-promo-card-deck"> -->
                           <!-- Promo Item -->
-                          <div class="navbar-promo-card navbar-promo-item">
-                            <a class="navbar-promo-link" href="../course/index.html">
+                          <!-- <div class="navbar-promo-card navbar-promo-item">
+                            <a class="navbar-promo-link disabled" href="../course/index.html">
                               <div class="media align-items-center">
                                 <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-67.svg" alt="SVG">
                                 <div class="media-body">
-                                  <span class="navbar-promo-title">Course <span class="badge badge-success badge-pill ml-1">New</span></span>
-                                  <span class="navbar-promo-text">Learn On-demand demo</span>
-                                </div>
+                                  <span class="navbar-promo-title">Courses</span>
+                                  <span class="navbar-promo-text">Coming soon...</span> -->
+                                  <!-- <span class="badge badge-success badge-pill ml-1">New</span>  Esto iba adentro del span de courses! -->
+                          <!--       </div>
                               </div>
                             </a>
-                          </div>
+                          </div> -->
                           <!-- End Promo Item -->
 
                           <!-- Promo Item -->
-                          <div class="navbar-promo-card navbar-promo-item">
-                            <a class="navbar-promo-link" href="../app-marketplace/index.html">
+                         <!--  <div class="navbar-promo-card navbar-promo-item">
+                            <a class="navbar-promo-link disabled" href="../app-marketplace/index.html">
                               <div class="media align-items-center">
                                 <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-45.svg" alt="SVG">
                                 <div class="media-body">
-                                  <span class="navbar-promo-title">App Marketplace</span>
-                                  <span class="navbar-promo-text">Marketplace app demo</span>
+                                  <span class="navbar-promo-title">App Features</span>
+                                  <span class="navbar-promo-text">Coming soon...</span>
                                 </div>
                               </div>
                             </a>
-                          </div>
+                          </div> -->
                           <!-- End Promo Item -->
-                        </div>
-
-                        <div class="navbar-promo-card-deck">
-                          <!-- Promo Item -->
-                          <div class="navbar-promo-card navbar-promo-item">
-                            <a class="navbar-promo-link" href="../help-desk/index.html">
+<!--                         </div>
+ -->
+<!--                         <div class="navbar-promo-card-deck">
+ -->                          <!-- Promo Item -->
+                          <!-- <div class="navbar-promo-card navbar-promo-item">
+                            <a class="navbar-promo-link disabled" href="../help-desk/index.html">
                               <div class="media align-items-center">
                                 <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-4.svg" alt="SVG">
                                 <div class="media-body">
                                   <span class="navbar-promo-title">Help Desk</span>
-                                  <span class="navbar-promo-text">Help desk demo</span>
+                                  <span class="navbar-promo-text">Coming soon...</span>
                                 </div>
                               </div>
                             </a>
-                          </div>
+                          </div> -->
                           <!-- End Promo Item -->
 
                           <!-- Promo Item -->
-                          <div class="navbar-promo-card navbar-promo-item">
+                          <!-- <div class="navbar-promo-card navbar-promo-item">
+                            <a class="navbar-promo-link disabled" href="javascript:;">
+                              <div class="media align-items-center">
+                                <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-19.svg" alt="SVG">
+                                <div class="media-body">
+                                  <span class="navbar-promo-title">Jobs</span>
+                                  <span class="navbar-promo-text">Coming soon...</span>
+                                </div>
+                              </div>
+                            </a>
+                          </div> -->
+                          <!-- End Promo Item -->
+
+                          <!-- Promo Item -->
+                          <!-- <div class="navbar-promo-card navbar-promo-item">
                             <a class="navbar-promo-link disabled" href="javascript:;">
                               <div class="media align-items-center">
                                 <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-5.svg" alt="SVG">
@@ -482,13 +420,13 @@
                                 </div>
                               </div>
                             </a>
-                          </div>
+                          </div> -->
                           <!-- End Promo Item -->
-                        </div>
-
-                        <div class="navbar-promo-card-deck">
+<!--                         </div>
+ -->
+                        <!-- <div class="navbar-promo-card-deck"> -->
                           <!-- Promo Item -->
-                          <div class="navbar-promo-card navbar-promo-item">
+                          <!-- <div class="navbar-promo-card navbar-promo-item">
                             <a class="navbar-promo-link disabled" href="javascript:;">
                               <div class="media align-items-center">
                                 <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-19.svg" alt="SVG">
@@ -498,11 +436,11 @@
                                 </div>
                               </div>
                             </a>
-                          </div>
+                          </div> -->
                           <!-- End Promo Item -->
 
                           <!-- Promo Item -->
-                          <div class="navbar-promo-card navbar-promo-item">
+                          <!-- <div class="navbar-promo-card navbar-promo-item">
                             <a class="navbar-promo-link disabled" href="javascript:;">
                               <div class="media align-items-center">
                                 <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-13.svg" alt="SVG">
@@ -512,41 +450,42 @@
                                 </div>
                               </div>
                             </a>
-                          </div>
+                          </div> -->
                           <!-- End Promo Item -->
-                        </div>
-                      </div>
-
+                        <!-- </div> -->
+<!--                       </div>
+ -->
                       <!-- Promo -->
-                      <div class="col-lg-4 navbar-promo d-none d-lg-block">
+               <!--        <div class="col-lg-4 navbar-promo d-none d-lg-block">
                         <a class="d-block navbar-promo-inner" href="#">
-                          <div class="position-relative">
-                            <img class="img-fluid rounded mb-3" src="../../assets/img/380x227/img1.jpg" alt="Image Description">
-                          </div>
-                          <span class="navbar-promo-text font-size-1">Front makes you look at things from a different perspectives.</span>
+                          <div class="position-relative"> -->
+                            <!-- <img class="img-fluid rounded mb-3" src="../../assets/img/380x227/img1.jpg" alt="Image Description"> -->
+                          <!-- </div>
+                          <span class="navbar-promo-text font-size-1">Digitalo makes you look at things from a different perspectives.</span>
                         </a>
-                      </div>
+                      </div> -->
                       <!-- End Promo -->
-                    </div>
-                  </div>
+                   <!--  </div>
+                  </div> -->
                   <!-- End Demos - Mega Menu -->
                 </li>
                 <!-- End Demos -->
 
                 <!-- Docs -->
-                <li class="hs-has-mega-menu navbar-nav-item"
+                <!-- <li class="hs-has-mega-menu navbar-nav-item"
                     data-hs-mega-menu-item-options='{
                       "desktop": {
                         "position": "right",
                         "maxWidth": "260px"
                       }
-                    }'>
-                  <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false">Docs</a>
+                    }'> -->
+                  <li class="navbar-nav-item">
+                  <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link" href="../pages/about-agency.html" aria-haspopup="true" aria-expanded="false">About Us</a>
 
                   <!-- Docs - Submenu -->
-                  <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu" style="min-width: 330px;">
+                  <!-- <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu" style="min-width: 330px;"> -->
                     <!-- Promo Item -->
-                    <div class="navbar-promo-item">
+                    <!-- <div class="navbar-promo-item">
                       <a class="navbar-promo-link" href="../../documentation/index.html">
                         <div class="media align-items-center">
                           <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-2.svg" alt="SVG">
@@ -559,11 +498,11 @@
                           </div>
                         </div>
                       </a>
-                    </div>
+                    </div> -->
                     <!-- End Promo Item -->
 
                     <!-- Promo Item -->
-                    <div class="navbar-promo-item">
+                    <!-- <div class="navbar-promo-item">
                       <a class="navbar-promo-link disabled" href="javascript:;">
                         <div class="media align-items-center">
                           <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-1.svg" alt="SVG">
@@ -573,12 +512,12 @@
                           </div>
                         </div>
                       </a>
-                    </div>
+                    </div> -->
                     <!-- End Promo Item -->
 
-                    <div class="navbar-promo-footer">
+                    <!-- <div class="navbar-promo-footer"> -->
                       <!-- List -->
-                      <div class="row no-gutters">
+                      <!-- <div class="row no-gutters">
                         <div class="col-6">
                           <div class="navbar-promo-footer-item">
                             <span class="navbar-promo-footer-text">Check what's new</span>
@@ -595,18 +534,18 @@
                             </a>
                           </div>
                         </div>
-                      </div>
+                      </div> -->
                       <!-- End List -->
-                    </div>
-                  </div>
+                    <!-- </div>
+                  </div> -->
                   <!-- End Docs - Submenu -->
-                </li>
+                <!-- </li> -->
                 <!-- End Docs -->
 
                 <!-- Button -->
                 <li class="navbar-nav-last-item">
-                  <a class="btn btn-sm btn-primary transition-3d-hover" href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/" target="_blank">
-                    Buy Now
+                  <a class="btn btn-sm btn-indigo btn-pill transition-3d-hover" href="#" target="_blank">
+                    Pre-Order
                   </a>
                 </li>
                 <!-- End Button -->
