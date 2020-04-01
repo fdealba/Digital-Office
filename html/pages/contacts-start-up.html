@@ -766,7 +766,7 @@
         <div class="col-lg-6">
           <div class="ml-lg-5">
             <!-- Form -->
-            <form id="form" class="js-validate card shadow-lg mb-4" onsubmit="return postToGoogle();" action="">
+            <form id="form" class="js-validate card shadow-lg mb-4">
               <div class="card-header border-0 bg-light text-center py-4 px-4 px-md-6">
                 <h2 class="h4 mb-0">General Enquiries</h2>
               </div>
@@ -824,12 +824,12 @@
                   </div>
                 </div>
 
-                <button type="submit" class="btn btn-block btn-primary transition-3d-hover">Submit</button>
+                <button id="submitButton" onclick="return postToGoogle();" class="btn btn-block btn-primary transition-3d-hover">Submit</button>
               </div>
             </form>
             <!-- End Form -->
 
-            <div class="text-center">
+            <div class="text-center" id="formSubtitle">
               <p class="small">We'll get back to you in 1-2 business days.</p>
             </div>
           </div>
@@ -1380,34 +1380,36 @@
     });
 
     function postToGoogle() {
-                var fullName = $("#fullName").val();
-                var emailAddress = $("#emailAddress").val();
-                var phoneNumber = $("#phoneNumber").val();
-                var message = $("#message").val();
+      var fullName = $("#fullName").val();
+      var emailAddress = $("#emailAddress").val();
+      var phoneNumber = $("#phoneNumber").val();
+      var message = $("#message").val();
+      if (!fullName.match(/^[a-zA-Z ]+$/)) return;
+      if (!emailAddress.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) return;
+      if (!phoneNumber.match(/^[\d ()+-]+$/)) return;
+      if (message === '') return
+      $.ajax({
+            url: "https://docs.google.com/forms/d/1VMBNWTfeAaWxkELUyOW2llm5Agn8YyXL5aExarDPn1k/formResponse?",
+            data: {
+                "entry.698442238": fullName.replace(/\s/g,'|'),
+                "entry.1035840249": phoneNumber.replace(/\s/g,'|'),
+                "emailAddress": emailAddress.replace(/\s/g,'|'),
+                "entry.72193471": message.replace(/\s/g,'|')
+              },
+            type: "POST",
+            dataType: "xml",
+            success: function(d) {
 
-                $.ajax({
-                    url: "https://docs.google.com/forms/d/1VMBNWTfeAaWxkELUyOW2llm5Agn8YyXL5aExarDPn1k/formResponse?",
-                    data: {
-                      "entry.698442238": fullName.replace(/\s/g,'|'),
-                      "entry.1035840249": phoneNumber.replace(/\s/g,'|'),
-                      "emailAddress": emailAddress.replace(/\s/g,'|'),
-                      "entry.72193471": message.replace(/\s/g,'|')
-                    },
-                    type: "POST",
-                    dataType: "xml",
-                    success: function(d)
-          {
-          },
+            },
           error: function(x, y, z)
             {
-
               // $('#success-msg').show();
-              $('#form').hide();
-
+              $('#form').remove();
+              $('#formSubtitle').remove();
             }
-                });
-        return false;
-            }
+      });
+      return false;
+    }
   </script>
 
   <!-- IE Support -->
