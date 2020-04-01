@@ -766,33 +766,41 @@
         <div class="col-lg-6">
           <div class="ml-lg-5">
             <!-- Form -->
-            <form class="js-validate card shadow-lg mb-4">
+            <form id="form" class="js-validate card shadow-lg mb-4" onsubmit="return postToGoogle();" action="">
               <div class="card-header border-0 bg-light text-center py-4 px-4 px-md-6">
                 <h2 class="h4 mb-0">General Enquiries</h2>
               </div>
 
               <div class="card-body p-4 p-md-6">
                 <div class="row">
-                  <div class="col-sm-6">
+                  <div class="col-sm-12">
                     <!-- Form Group -->
                     <div class="js-form-message form-group">
-                      <label for="firstName" class="input-label">First name</label>
-                      <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Nataly" aria-label="Nataly" required
+                      <label for="fullName" class="input-label">Full Name</label>
+                      <input type="text" class="form-control" name="entry.698442238" id="fullName" placeholder="Nataly Rogers" aria-label="Nataly" required
                              data-msg="Please enter first your name">
                     </div>
                     <!-- End Form Group -->
                   </div>
 
-                  <div class="col-sm-6">
-                    <!-- Form Group -->
-                    <div class="js-form-message form-group">
+<!--                   <div class="col-sm-6">
+ -->                    <!-- Form Group -->
+<!--                     <div class="js-form-message form-group">
                       <label for="lastName" class="input-label">Last name</label>
                       <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Gaga" aria-label="Gaga" required
                              data-msg="Please enter last your name">
+                    </div> -->
+                    <!-- End Form Group -->
+<!--                   </div> -->
+                  <div class="col-sm-12">
+                    <!-- Form Group -->
+                    <div class="js-form-message form-group">
+                      <label for="phoneNumber" class="input-label">Phone Number</label>
+                      <input type="phoneNumber" class="form-control" name="entry.1035840249" id="phoneNumber" placeholder="+11 4839 2020" required
+                             data-msg="Please enter a valid phone number">
                     </div>
                     <!-- End Form Group -->
                   </div>
-
                   <div class="col-sm-12">
                     <!-- Form Group -->
                     <div class="js-form-message form-group">
@@ -808,7 +816,7 @@
                     <div class="js-form-message form-group">
                       <label for="message" class="input-label">Message</label>
                       <div class="input-group">
-                        <textarea class="form-control" rows="4" name="message" id="message" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required
+                        <textarea class="form-control" rows="4" name="entry.72193471" id="message" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required
                                   data-msg="Please enter a reason."></textarea>
                       </div>
                     </div>
@@ -1370,6 +1378,36 @@
         var goTo = new HSGoTo($(this)).init();
       });
     });
+
+    function postToGoogle() {
+                var fullName = $("#fullName").val();
+                var emailAddress = $("#emailAddress").val();
+                var phoneNumber = $("#phoneNumber").val();
+                var message = $("#message").val();
+
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/1VMBNWTfeAaWxkELUyOW2llm5Agn8YyXL5aExarDPn1k/formResponse?",
+                    data: {
+                      "entry.698442238": fullName,
+                      "entry.1035840249": phoneNumber,
+                      "emailAddress": emailAddress,
+                      "entry.72193471": message
+                    },
+                    type: "POST",
+                    dataType: "xml",
+                    success: function(d)
+          {
+          },
+          error: function(x, y, z)
+            {
+
+              // $('#success-msg').show();
+              $('#form').hide();
+
+            }
+                });
+        return false;
+            }
   </script>
 
   <!-- IE Support -->
