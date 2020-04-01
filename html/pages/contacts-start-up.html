@@ -1388,10 +1388,10 @@
                 $.ajax({
                     url: "https://docs.google.com/forms/d/1VMBNWTfeAaWxkELUyOW2llm5Agn8YyXL5aExarDPn1k/formResponse?",
                     data: {
-                      "entry.698442238": fullName,
-                      "entry.1035840249": phoneNumber,
-                      "emailAddress": emailAddress,
-                      "entry.72193471": message
+                      "entry.698442238": fullName.replace(/\s/g,'|'),
+                      "entry.1035840249": phoneNumber.replace(/\s/g,'|'),
+                      "emailAddress": emailAddress.replace(/\s/g,'|'),
+                      "entry.72193471": message.replace(/\s/g,'|')
                     },
                     type: "POST",
                     dataType: "xml",
