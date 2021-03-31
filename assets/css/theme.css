@@ -6931,6 +6931,10 @@ a.close.disabled {
   vertical-align: top !important;
 }
 
+.align-super {
+  vertical-align: super !important;
+}
+
 .align-middle {
   vertical-align: middle !important;
 }
